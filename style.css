@@ -5,6 +5,7 @@
     --blue: rgb(106, 106, 238);
     --gray: rgb(161, 161, 161);
     --white: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .cards {
@@ -15,17 +16,33 @@
 
 .card {
     display: grid;
-    background-color: antiquewhite;
+    background-color: wite;
 }
 
-.title {}
+.title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
 
 .item {
     display: flex;
     justify-content: space-between;
-    column-gap: 4em;
+    row-gap: 0em;
 }
 
+.item p {
+    margin: 0;
+}
+.items {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+}
 .item__att {
 
 }
@@ -113,4 +130,8 @@
 
 .scales:hover {
     color: var(--blue);
+}
+
+.image {
+    margin: 0 auto
 }
