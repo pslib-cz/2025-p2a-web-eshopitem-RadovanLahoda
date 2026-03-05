@@ -58,10 +58,11 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
+    
+
     .cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        align-items: start;
         padding: 2em;
     }
 
@@ -71,6 +72,19 @@
         padding: 1em;
         gap: 1em;
         z-index: 0;
+        position: relative;
+        grid-template-rows: subgrid;
+        grid-row: span 6;
+    }
+
+    .badge {
+        position: absolute;
+        background-color: var(--purple);
+        color: var(--white);
+        padding: 0.5em 0em;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 0.2em 1em;
     }
 
     .card:hover {
@@ -92,12 +106,6 @@
     .items {
         display: flex;
         flex-direction: column;
-    }
-
-    .content {
-        display: flex;
-        flex-direction: column;
-        row-gap: 2em;
     }
 
     .item__att {}
@@ -126,15 +134,9 @@
         align-items: end;
     }
 
-    .info__delivery {}
-
-    .info__delivery__text {}
-
     .text--green {
         color: var(--green);
     }
-
-    .info__price {}
 
     .delivery__text--purple {
         color: var(--purple);
@@ -178,7 +180,7 @@
     }
 
     .image {
-        margin: 0 auto
+        margin: 0 auto;
     }
     .footer__button__text {
         font-size: 1.5em;
@@ -187,14 +189,8 @@
     .icon-shopping-cart {
         align-self: center;
     }
-    .icon-compare_arrows {
-
-    }
     .icon-compare_arrows:hover {
         color: var(--blue);
-    }
-    .icon-heart {
-        
     }
     .icon-heart:hover {
         color: var(--red);
