@@ -67,8 +67,9 @@
 
     .cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
+        grid-template-columns: repeat(auto-fill, minmax(350px, 500px));
         padding: 2em;
+        justify-content: center;
     }
 
     .card {
@@ -82,8 +83,7 @@
         grid-row: span 7;
     }
 
-    .badge {
-        position: absolute;
+    .badges__item {
         background-color: var(--purple);
         color: var(--white);
         padding: 0.5em 0em;
@@ -91,17 +91,20 @@
         border-top-right-radius: 10px;
         padding: 0.2em 1em;
     }
+    .badges {
+        position: absolute;
+    }
 
     .card:hover {
         box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
         z-index: 1;
     }
 
-    .title {
+    .card__title {
         font-weight: bold;
         font-size: 1.5em;
     }
-    .title:hover {
+    .card__title:hover {
         text-decoration: underline;
     }
 
@@ -139,21 +142,27 @@
         align-items: end;
     }
 
-    .text--green {
-        color: var(--green);
-    }
 
-    .delivery__text--purple {
+
+    .info__text--purple {
         color: var(--purple);
     }
 
-    .delivery__text--big {
+    .info__text--big {
         font-weight: bold;
         font-size: 2em;
     }
 
-    .delivery__text--grey {
+    .info__text--grey {
         color: var(--gray);
+    }
+
+    .info__text--green {
+        color: var(--green)
+    }
+
+    .gift__text--green {
+        color: var(--green);
     }
 
     .footer {
@@ -184,10 +193,10 @@
         box-shadow: none;
     }
 
-    .image {
+    .card__image {
         margin: 0 auto;
     }
-    .footer__button__text {
+    .button__text {
         font-size: 1.5em;
         
     }
@@ -219,18 +228,18 @@
     }
     .color:hover {
         transform: scale(1.2);
-        box-shadow: 0px 0px 2px var(--gray);
+        box-shadow: 0px 0px 5px var(--gray);
     }
-    .red {
+    .color--red {
         background-color: var(--red);
     }
-    .yellow {
+    .color--yellow {
         background-color: var(--yellow);
     }
-    .blue {
+    .color--blue {
         background-color: var(--blue);
     }
-    .green {
+    .color--green {
         background-color: var(--green);
     }
 }
