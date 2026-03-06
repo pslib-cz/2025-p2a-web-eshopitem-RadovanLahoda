@@ -1,0 +1,239 @@
+@layer reset, main;
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?45b63b');
+  src:  url('../fonts/icomoon.eot?45b63b#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?45b63b') format('truetype'),
+    url('../fonts/icomoon.woff?45b63b') format('woff'),
+    url('../fonts/icomoon.svg?45b63b#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-compare_arrows:before {
+  content: "\e900";
+}
+.icon-shopping-cart:before {
+  content: "\e903";
+}
+.icon-gift:before {
+  content: "\e901";
+}
+.icon-heart:before {
+  content: "\e902";
+}
+
+
+@layer reset {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .link {
+        text-decoration: none;
+        color: black;
+    }
+}
+@layer main {
+    :root {
+        --green: rgb(10, 206, 10);
+        --purple: rgb(124, 40, 163);
+        --red: rgb(196, 20, 87);
+        --blue: rgb(106, 106, 238);
+        --gray: rgb(161, 161, 161);
+        --white: rgb(255, 255, 255);
+        --yellow: rgb(252, 255, 84);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        padding: 2em;
+    }
+
+    .card {
+        display: grid;
+        background-color: var(--white);
+        padding: 1em;
+        gap: 1em;
+        z-index: 0;
+        position: relative;
+        grid-template-rows: subgrid;
+        grid-row: span 7;
+    }
+
+    .badge {
+        position: absolute;
+        background-color: var(--purple);
+        color: var(--white);
+        padding: 0.5em 0em;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 0.2em 1em;
+    }
+
+    .card:hover {
+        box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+    .title:hover {
+        text-decoration: underline;
+    }
+
+    .item {
+        display: flex;
+        justify-content: space-between;
+        margin: 0.1em;
+    }
+
+    .items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item__att {}
+
+    .item__val {
+        font-weight: bold;
+    }
+
+    .gift {
+        display: flex;
+        justify-content: center;
+        column-gap: 1em;
+        background-color: rgba(10, 206, 10, 0.2);
+        border: solid 1px var(--green);
+        border-radius: 10px;
+        padding: 0.5em;
+    }
+
+    .gift:hover {
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    .text--green {
+        color: var(--green);
+    }
+
+    .delivery__text--purple {
+        color: var(--purple);
+    }
+
+    .delivery__text--big {
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+    .delivery__text--grey {
+        color: var(--gray);
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-around;
+        background-color: var(--gray);
+        padding: 1em;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer__icons {
+        display: flex;
+        column-gap: 1em;
+    }
+
+    .footer__button {
+        display: flex;
+        column-gap: 1em;
+        color: var(--white);
+        background-color: var(--green);
+        padding: 0.5em 1em;
+        border-radius: 0.5em;
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
+        
+    }
+    .footer__button:hover {
+        box-shadow: none;
+    }
+
+    .image {
+        margin: 0 auto;
+    }
+    .footer__button__text {
+        font-size: 1.5em;
+        
+    }
+    .icon-shopping-cart {
+        align-self: center;
+    }
+    .icon-compare_arrows:hover {
+        color: var(--blue);
+    }
+    .icon-heart:hover {
+        color: var(--red);
+    }
+    .icon-gift {
+        align-self: center;
+    }
+    .icon {
+        font-size: 1.5em;
+    }
+    .colors {
+        display: flex;
+        column-gap: 1em;
+        justify-content: center;
+    }
+    .color {
+        height: 1em;
+        width: 1em;
+        border-radius: 5px;
+        border: solid 1px var(--gray);
+    }
+    .color:hover {
+        transform: scale(1.2);
+        box-shadow: 0px 0px 2px var(--gray);
+    }
+    .red {
+        background-color: var(--red);
+    }
+    .yellow {
+        background-color: var(--yellow);
+    }
+    .blue {
+        background-color: var(--blue);
+    }
+    .green {
+        background-color: var(--green);
+    }
+}
